@@ -1,0 +1,21 @@
+Type: AWS::IAM::User
+Properties: 
+  Groups: 
+    - infra-admin
+  #LoginProfile: # Disalbe web login
+  #  LoginProfile
+  #ManagedPolicyArns: 
+  #  - String
+  #Path: String
+  #PermissionsBoundary: String
+  #Policies: 
+  #  - Policy
+  Tags: 
+    - devops
+  UserName: cloudformation
+---
+Type: AWS::IAM::AccessKey
+Properties: 
+  #Serial: Integer
+  #Status: String
+  UserName: cloudformation
